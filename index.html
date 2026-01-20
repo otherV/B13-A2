@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechWave😎</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechWave😎</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <style type="text/tailwindcss">
+    @theme {
+        --breakpoint-*: initial;
+        --breakpoint-md: 576px;
+        --breakpoint-lg: 992px;
+        --breakpoint-xl: 1600px;
+      }
+    </style>
 </head>
-<body class="bg-purple font-inter">
-    
-<header>
+
+<body class="bg-purple font-inter text-white">
+
+  <header class="w-full">
 
 
-  <nav class="flex items-center justify-between">
-    <a href="" class="">
+    <nav class="container mx-auto flex justify-between py-4">
+
+      <a href="" class="">
         <img src="./assets/TechWave.webp" class="" alt="">
-    </a>
-    <div class="flex items-center justify-between">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
+      </a>
+      <ul class="flex justify-between items-center gap-10">
         <li>
           <a href="#" class="">About</a>
         </li>
@@ -33,12 +43,29 @@
           <a href="#" class="">Host</a>
         </li>
       </ul>
-    </div>
-    <div class="">
-      <button>Subscribe</button>
-    </div>
-</nav>
+      <button class="bg-blue-500 hover:bg-blue-700 rounded"><a href="#">Subscribe</a></button>
 
-</header>
+    </nav>
+
+    <section class="banner w-full flex justify-center bg-[url('./assets/hero-bg.png')] bg-cover bg-center md:pt-10 md:pb-30 lg:pt-10 lg:pb-30">
+      <div class="content flex flex-col justify-center text-white text-center my-4">
+        <div class="hero-img-group flex justify-center bg-[url('./assets/hero-circle.png')] bg-contain bg-center bg-no-repeat mt-0 mb-2 p-15 md:p-30 lg:p-30">
+
+          <img src="./assets/microphone.png" class="w-1/4 md:w-3/4 lg:w-full">
+
+        </div>
+        <h1 class="text-5xl font-bold md:mt-4 lg:mt-4">TechWave</h1>
+        <p class="text-lg">Your daily dose of tech insights,<br>
+          productivity hacks, and personal growth
+        </p>
+        <div class="hero-btn-group flex justify-center gap-3">
+          <button class="bg-blue-500 hover:bg-blue-700 rounded"><a href="#">Subscribe</a></button>
+          <button class="bg-blue-500 hover:bg-blue-700 rounded"><a href="#">Subscribe</a></button>
+        </div>
+      </div>
+    </section>
+
+  </header>
 </body>
+
 </html>
