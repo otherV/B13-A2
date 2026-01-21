@@ -6,3 +6,15 @@
 .bg-purple{
     background: rgba(26, 11, 46, 1);
 }
+
+.btn-bg-gradient{
+  background: linear-gradient(40deg,rgba(241, 229, 73, 1) 0%, rgba(241, 27, 176, 1) 50%, rgba(146, 0, 246, 1) 100%);
+}
+
+.btn-bg-gradient:hover{
+  background: linear-gradient(-40deg,rgba(241, 229, 73, 1) 0%, rgba(241, 27, 176, 1) 50%, rgba(146, 0, 246, 1) 100%);
+  cursor: pointer;
+}
+a:hover{
+  color: #00ff88;
+}

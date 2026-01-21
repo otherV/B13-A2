@@ -6,66 +6,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechWave😎</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./styles/style.css">
   <style type="text/tailwindcss">
     @theme {
         --breakpoint-*: initial;
+        --breakpoint-3xs: 256px;
+        --breakpoint-2xs: 288px;
+        --breakpoint-xs: 320px;
+        --breakpoint-md: 384px;
         --breakpoint-md: 576px;
+        --breakpoint-2md: 672px;
+        --breakpoint-3md: 768px;
         --breakpoint-lg: 992px;
-        --breakpoint-xl: 1600px;
+        --breakpoint-xl: 1024px;
+        --breakpoint-2xl: 1152px;
+        --breakpoint-3xl: 1280px;
+        --breakpoint-4xl: 1601px;
       }
     </style>
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body class="bg-purple font-inter text-white">
 
   <header class="w-full">
+    <nav class="mx-auto max-w-9/10 px-2 md:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between space-x-4">
+          <div class="flex items-center md:w-1/2">
+            <div class="flex items-center">
+              <img src="./assets/TechWave.webp" alt="" class="w-auto" />
+            </div>
+          </div>
+          <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
 
+            <div class="hidden md:ml-6 md:block">
+              <div class="flex space-x-4">
+                <a href="#" class="px-3 py-2 text-base">About</a>
+                <a href="#" class="px-3 py-2 text-base">Episodes</a>
+                <a href="#" class="px-3 py-2 text-base">Host</a>
+              </div>
+            </div>
 
-    <nav class="container mx-auto flex justify-between py-4">
+          </div>
+          <button
+            class="hidden md:block btn-bg-gradient rounded-full text-base font-bold capitalize px-3 py-2">Subscribe</button>
+          <div class="md:hidden flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+            <button type="button" command="--toggle" commandfor="mobile-menu"
+              class="flex items-center justify-center p-2 text-white hover:border-2 hover:cursor-pointer">
+              <img src="./assets/hamburger-menu.png" alt="" class="md:hidden">
+            </button>
+          </div>
+        </div>
 
-      <a href="" class="">
-        <img src="./assets/TechWave.webp" class="" alt="">
-      </a>
-      <ul class="flex justify-between items-center gap-10">
-        <li>
-          <a href="#" class="">About</a>
-        </li>
-        <li>
-          <a href="#" class="">Episodes</a>
-        </li>
-        <li>
-          <a href="#" class="">Host</a>
-        </li>
-      </ul>
-      <button class="bg-blue-500 hover:bg-blue-700 rounded"><a href="#">Subscribe</a></button>
-
+      <el-disclosure id="mobile-menu" hidden class="block md:hidden">
+        <div class="space-y-1 flex flex-col items-center pb-3">
+          <a href="#" class="block px-3 py-2 text-base">About</a>
+          <a href="#" class="block px-3 py-2 text-base">Episodes</a>
+          <a href="#" class="block px-3 py-2 text-base">Host</a>
+          <button class="btn-bg-gradient rounded-full text-base font-bold capitalize px-3 py-2">Subscribe</button>
+        </div>
+      </el-disclosure>
     </nav>
 
-    <section class="banner w-full flex justify-center bg-[url('./assets/hero-bg.png')] bg-cover bg-center md:pt-10 md:pb-30 lg:pt-10 lg:pb-30">
-      <div class="content flex flex-col justify-center text-white text-center my-4">
-        <div class="hero-img-group flex justify-center bg-[url('./assets/hero-circle.png')] bg-contain bg-center bg-no-repeat mt-0 mb-2 p-15 md:p-30 lg:p-30">
+    <section
+      class="banner w-full flex justify-center items-center bg-[#211944] bg-[url('./assets/hero-bg.png')] bg-cover bg-center pb-12">
+      <div class="w-full flex justify-center items-center bg-[#211944] bg-[url('./assets/hero-bg.png')] bg-cover bg-center pt-12">
+        <div class="content flex flex-col items-center text-white text-center mx-6">
+        <div
+          class="relative hero-img-group flex flex-col items-center bg-[url('./assets/hero-circle.png')] bg-contain bg-center bg-no-repeat h-1/2 w-1/2 py-10 px-12">
 
-          <img src="./assets/microphone.png" class="w-1/4 md:w-3/4 lg:w-full">
+          <img src="./assets/microphone.png" class="w-1/2 h-1/2">
+          <div class="absolute top-1 right-8 rounded-full px-3 py-1 text-black text-base font-bold bg-[#00FF88] shadow-lg shadow-green-500/40">NEW</div>
 
         </div>
-        <h1 class="text-5xl font-bold md:mt-4 lg:mt-4">TechWave</h1>
-        <p class="text-lg">Your daily dose of tech insights,<br>
-          productivity hacks, and personal growth
-        </p>
-        <div class="hero-btn-group flex justify-center gap-3">
-          <button class="bg-blue-500 hover:bg-blue-700 rounded"><a href="#">Subscribe</a></button>
-          <button class="bg-blue-500 hover:bg-blue-700 rounded"><a href="#">Subscribe</a></button>
+        <div class="script h-1/2">
+          <h1 class="text-6xl font-bold">TechWave</h1>
+          <p class="text-base mt-3">Your daily dose of tech insights, productivity hacks, and personal growth
+          </p>
+          <div class="hero-btn-group flex justify-center gap-3 mt-6">
+            <button class="btn-bg-gradient rounded-full text-base font-bold capitalize px-5 py-2">Listen On
+              Spotify</button>
+            <button class="btn-bg-gradient rounded-full text-base font-bold capitalize px-5 py-2">Subscribe</button>
+          </div>
         </div>
       </div>
+      </div>
+      
     </section>
 
   </header>
+
+
 </body>
 
 </html>
