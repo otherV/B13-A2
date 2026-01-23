@@ -9,11 +9,13 @@
 
 .btn-bg-gradient{
   background: linear-gradient(40deg,rgba(241, 229, 73, 1) 0%, rgba(241, 27, 176, 1) 50%, rgba(146, 0, 246, 1) 100%);
+  transition: transform 0.3s ease;
 }
 
 .btn-bg-gradient:hover{
   background: linear-gradient(-40deg,rgba(241, 229, 73, 1) 0%, rgba(241, 27, 176, 1) 50%, rgba(146, 0, 246, 1) 100%);
   cursor: pointer;
+  transform: scale(1.1);
 }
 a:hover{
   color: #00ff88;
