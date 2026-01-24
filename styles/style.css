@@ -34,10 +34,8 @@ a:hover {
   color: #00ff88;
 }
 
-/* This start to get interesting: we go into mobile phone mode */
 @media (max-width: 576px) {
 
-  /* Here is the magic: if the checkbox is not marked, the adjacent list is not displayed */
   input[type="checkbox"]:not(:checked)+ul {
     display: none;
   }
