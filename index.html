@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechWave😎</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style type="text/tailwindcss">
     @theme {
         --breakpoint-*: initial;
@@ -36,42 +35,32 @@
 
   <header class="w-full">
 
-    <nav class="mx-auto max-w-9/10 px-2 md:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between space-x-4">
-        <div class="flex items-center md:w-1/2">
-          <div class="flex items-center">
-            <img src="./assets/TechWave.webp" alt="" class="w-auto" />
-          </div>
-        </div>
-        <div class="flex items-center justify-center">
-
-          <div class="hidden md:block">
-            <div class="flex space-x-4">
-              <a href="#" class="px-3 py-2 text-base">About</a>
-              <a href="#" class="px-3 py-2 text-base">Episodes</a>
-              <a href="#" class="px-3 py-2 text-base">Host</a>
-            </div>
-          </div>
-
-        </div>
+    <nav class="mx-auto max-w-9/10 px-2 md:px-6 lg:px-8 py-2">
+      <div class="flex justify-between items-center">
+        <a href="#" class="flex justify-center items-center">
+          <img src="./assets/TechWave.webp" alt="">
+        </a>
+        <ul class="hidden md:flex justify-between items-center gap-6">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Episodes</a></li>
+          <li><a href="#">Host</a></li>
+        </ul>
         <button
-          class="hidden md:block btn-bg-gradient rounded-full text-base font-bold capitalize px-3 py-2">Subscribe</button>
-        <div class="md:hidden flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
-          <button type="button" command="--toggle" commandfor="mobile-menu"
-            class="flex items-center justify-center p-2 text-white hover:border-2 hover:cursor-pointer">
-            <img src="./assets/hamburger-menu.png" alt="" class="md:hidden">
-          </button>
-        </div>
+          class="hidden btn-bg-gradient rounded-full text-base font-semibold capitalize px-3 py-2 md:flex justify-between items-center gap-2"><span>Subscribe</span><img src="./assets/ArrowRight.webp" alt=""></button>
+        <label for="menu" class="md:hidden flex justify-center items-center">
+          <img src="./assets/hamburger-menu.png" alt="" class="p-2 hover:border-2 hover:cursor-pointer">
+        </label>
       </div>
-
-      <el-disclosure id="mobile-menu" hidden class="block md:hidden">
-        <div class="space-y-1 flex flex-col items-center pb-3">
-          <a href="#" class="block px-3 py-2 text-base">About</a>
-          <a href="#" class="block px-3 py-2 text-base">Episodes</a>
-          <a href="#" class="block px-3 py-2 text-base">Host</a>
-          <button class="btn-bg-gradient rounded-full text-base font-bold capitalize px-3 py-2">Subscribe</button>
-        </div>
-      </el-disclosure>
+      <div id="burger">
+        <input id="menu" type="checkbox" class="hidden" checked="checked" />
+        <ul class="md:hidden flex flex-col justify-between items-center gap-3 py-3">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Episodes</a></li>
+          <li><a href="#">Host</a></li>
+          <li><button class="btn-bg-gradient rounded-full text-base font-semibold capitalize px-3 py-2 flex justify-between items-center gap-2"><span>Subscribe</span><img src="./assets/ArrowRight.webp" alt=""></button>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <section
@@ -93,9 +82,8 @@
             <p class="text-base mt-3">Your daily dose of tech insights, productivity hacks, and personal growth
             </p>
             <div class="hero-btn-group flex justify-center gap-3 mt-6">
-              <button class="btn-bg-gradient rounded-full text-base font-bold capitalize px-5 py-2">Listen On
-                Spotify</button>
-              <button class="btn-bg-gradient rounded-full text-base font-bold capitalize px-5 py-2">Subscribe</button>
+              <button class="btn-bg-gradient rounded-full text-base font-semibold capitalize px-5 py-2 flex justify-between items-center gap-2"><img src="./assets/line-md_spotify.webp" alt=""><span>Listen On Spotify</span></button>
+              <button class="btn-bg-clear border-[1px] border-[#00ff88] rounded-full text-base font-semibold capitalize px-5 py-2 flex justify-between items-center gap-2"><img src="./assets/message.png" alt=""><span>Subscribe</span></button>
             </div>
           </div>
         </div>
@@ -225,7 +213,7 @@
             <h1 class="mt-3 text-2xl font-bold text-white"> The Future of AI in Everyday Life</h1>
             <p class="mt-3 text-base opacity-50"> Exploring how artificial intelligence is transforming our daily
               routines and what to expect in the next decade.</p>
-            <p class="mt-3 text-base font-semibold text-[#00ff88]">42 min</p>
+            <p class="mt-3 text-base font-semibold text-[#00ff88] flex justify-start items-center gap-2"><img src="./assets/clock.png" alt="">42 min</p>
           </div>
         </div>
 
@@ -242,7 +230,7 @@
             <p class="mt-3 text-base opacity-50">
               Practical strategies for staying productive and maintaining work-life balance in a remote environment.
             </p>
-            <p class="mt-3 text-base font-semibold text-[#00ff88]">42 min</p>
+            <p class="mt-3 text-base font-semibold text-[#00ff88] flex justify-start items-center gap-2"><img src="./assets/clock.png" alt="">35 min</p>
           </div>
         </div>
 
@@ -259,7 +247,7 @@
             <p class="mt-3 text-base opacity-50">
               Expert advice on navigating your tech career from junior developer to senior leadership roles.
             </p>
-            <p class="mt-3 text-base font-semibold text-[#00ff88]">42 min</p>
+            <p class="mt-3 text-base font-semibold text-[#00ff88] flex justify-start items-center gap-2"><img src="./assets/clock.png" alt="">51 min</p>
           </div>
         </div>
 
@@ -271,11 +259,11 @@
     <div class="content mx-auto max-w-9/10 px-2 md:px-6 lg:px-8 lg:py-20 py-12 flex flex-col items-center">
       <h1 class="text-5xl font-bold text-center lg:mt-0"> Meet the Host</h1>
       <div
-        class="host-card w-full grid grid-flow-row grid-cols-1 lg:grid-cols-6 gap-3 lg:gap-4 bg-[#2a0f4d] rounded-[4vw] lg:rounded-[1vw] mt-5 lg:mt-8 p-8">
-        <div class="col-span-1 flex justify-center">
-          <img src="./assets/host.png" alt="">
+        class="host-card w-full grid grid-flow-row grid-cols-1 md:grid-cols-6 gap-3 lg:gap-4 bg-[#2a0f4d] rounded-[4vw] lg:rounded-[1vw] mt-5 lg:mt-8 p-8">
+        <div class="col-span-1 md:col-span-2 lg:col-span-1 flex justify-center items-center">
+          <div><img src="./assets/host.png" alt="" class=""></div>
         </div>
-        <div class="flex justify-start col-span-5">
+        <div class="flex justify-start md:col-span-4 lg:col-span-5">
           <div
             class="flex flex-col items-center lg:items-start text-center lg:text-left justify-between lg:justify-around gap-4">
             <h1 class="text-2xl font-bold text-white"> Alex Kumar</h1>
@@ -307,20 +295,21 @@
     <div class="content w-full flex flex-col justify-center items-center gap-10">
 
       <img src="./assets/TechWave.webp" alt="" class="w-1/4">
-      <div class="flex justify-between items-center gap-10">
+      <div class="flex flex-col lg:flex-row justify-between items-center gap-10">
 
         <ul class="flex justify-between items-center gap-10">
-          <li><a class="text-base flex justify-center gap-3" href=""><img src="./assets/spotify.png"
-                alt=""><span class="opacity-50">Spotify</span></a></li>
-          <li><a class="text-base flex justify-center gap-3" href=""><img src="./assets/apple-podcast.png" alt=""><span class="opacity-50">Apple
+          <li><a class="text-base flex justify-between items-center gap-3" href=""><div><img src="./assets/spotify.png" alt=""></div><span
+                class="opacity-50">Spotify</span></a></li>
+          <li><a class="text-base flex justify-between items-center gap-3" href=""><div><img src="./assets/apple-podcast.png" alt=""></div><span
+                class="opacity-50">Apple
                 Podcasts</span></a></li>
         </ul>
 
         <ul class="flex justify-between items-center gap-10">
-          <li><a class="text-base flex justify-center gap-3" href=""><img src="./assets/youtube-podcast.png"
-                alt=""><span class="opacity-50">YouTube</span></a></li>
-          <li><a class="text-base flex justify-center gap-3" href=""><img src="./assets/twitter.png"
-                alt=""><span class="opacity-50">Twitter</span></a></li>
+          <li><a class="text-base flex justify-between items-center gap-3" href=""><div><img src="./assets/youtube-podcast.png"
+                alt=""></div><span class="opacity-50">YouTube</span></a></li>
+          <li><a class="text-base flex justify-between items-center gap-3" href=""><div><img src="./assets/twitter.png" alt=""></div><span
+                class="opacity-50">Twitter</span></a></li>
         </ul>
 
       </div>
